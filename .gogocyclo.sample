@@ -1,0 +1,10 @@
+# an sample config that express all errors when gocyclo is run against stdlib
+# database/sql:
+#
+# gocyclo -over 20 $GOPATH/src/database/sql | gogocylo
+#
+[gogocyclo]
+ignores = `sql`.convertAssign
+ignores = `sql`.TestConversions
+ignores = `sql`.TestMaxOpenConns
+ignores = `sql`.(*fakeStmt).Query
